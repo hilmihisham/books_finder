@@ -87,3 +87,7 @@ final info = book.info;
 Please file issues, bugs, or feature requests in our [issue tracker](https://github.com/bdlukaa/books_finder/issues/new).
 
 To contribute a change to this plugin open a [pull request](https://github.com/bdlukaa/books_finder/pulls).
+
+## Fork version update
+
+- 24/10/2024 - update queryBooks function (in `lib\src\books_finder_base.dart`) to accept api key
