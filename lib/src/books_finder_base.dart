@@ -47,6 +47,7 @@ Future<List<Book>> queryBooks(
   PrintType? printType = PrintType.all,
   int startIndex = 0,
   bool reschemeImageLinks = false,
+  String? apiKey, // hilmi 20241024
 }) async {
   assert(query.isNotEmpty);
 
@@ -68,6 +69,7 @@ Future<List<Book>> queryBooks(
   if (printType != null) {
     q += '&printType=${printType.toString().replaceAll('PrintType.', '')}';
   }
+  if (apiKey != null) q += '&key=$apiKey'; // hilmi 20241024
   final result = await http.get(Uri.parse(q));
   if (result.statusCode == 200) {
     final books = <Book>[];
